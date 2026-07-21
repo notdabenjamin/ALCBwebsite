@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Astronomically Large Cheeseburger</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+     body {
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+
+    background-image: url('mmmdonuts.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #000000;
+}
+
+
+    cheese {
+        color: #dbde0a;
+    }
+
+    .big {
+        font-size: 75px;
+    }
+
+    /* Opening video */
+    #intro {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 1s ease;
+        pointer-events: none;
+    }
+
+    /* Main website */
+    #website {
+    opacity: 0;
+    transition: opacity 1s ease;
+    min-height: 100vh;
+    color: white;
+    padding: 40px;
+    background: transparent;
+}
+
+    #website.show {
+        opacity: 1;
+    }
+
+    #intro.hide {
+        opacity: 0;
+    }
+
+    .centered {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.socials {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    display: flex;
+    gap: 15px;
+}
+
+.nav {
+    position: fixed;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 10px;
+
+    background: rgba(0,0,0,0.65);
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    max-width: 95vw;
+
+    overflow-x: auto;
+
+    z-index: 100;
+}
+
+
+.nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    background: #222;
+
+    padding: 8px 16px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+
+}
+
+
+.nav a:hover {
+
+    background: #dbde0a;
+
+    color: black;
+
+    transform: translateY(-3px);
+
+}
+
+@media (max-width: 600px) {
+
+    .nav {
+
+        top: 10px;
+
+        padding: 8px;
+
+        gap: 6px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .nav a {
+
+        font-size: 12px;
+
+        padding: 8px 10px;
+
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<video id="intro" autoplay muted>
+    <source src="opening.mp4" type="video/mp4">
+</video>
+
+
+<div id="website">
+
+    <div class="logo">
+        <a href="index.html">
+            <img width="48" height="48" src="db/src/offical/Transparent PNG Logo 256x256.png" alt="Logo">
+        </a>
+    </div>
+
+    <div class="socials">
+        <a href="https://alcb.itch.io">
+            <img width="48" height="48" src="db/src/itchio-textless-white.svg" alt="Itch.io">
+        </a>
+
+        <a href="https://x.com/ALCBGames">
+            <img width="48" height="48" src="db/src/logo-white.png" alt="X">
+        </a>
+    </div>
+
+    <h1 class="centered big">
+        Astronomically Large
+        <cheese><br>Cheeseburger</cheese>
+    </h1>
+
+    <div class="nav">
+
+    <a href="/index.html">Home</a>
+    <a href="/games.html">Games</a>
+    <a href="/legal/index.html">Legal</a>
+    <a href="/vault/index.html">Vault</a>
+    <a href="mailto:notdabenjamin@gmail.com">Contact</a>
+
+</div>
+
+</div>
+
+
+
+
+<script>
+
+const video = document.getElementById("intro");
+const website = document.getElementById("website");
+
+
+// Wait exactly 5 seconds
+setTimeout(() => {
+
+    video.classList.add("hide");
+
+    website.classList.add("show");
+
+    // Remove video after fade
+    setTimeout(() => {
+        video.remove();
+    }, 1000);
+
+}, 5000);
+
+
+</script>
+
+</body>
+</html>
