@@ -170,6 +170,107 @@
 
 }
 
+/* The little side button */
+#drawerTab{
+    position:fixed;
+    left:-38px;
+    top:180px; /* move this lower/higher */
+    transform:rotate(-90deg);
+    transform-origin:center;
+
+    background:#000000;
+    color:rgb(249, 245, 245);
+    padding:12px 22px;
+    border-radius:10px 10px 0 0;
+
+    cursor:pointer;
+    z-index:3;
+    -webkit-user-select:none;
+    user-select:none;
+
+    transition:.2s;
+}
+
+#drawerTab:hover{
+    left:-32px;
+}
+
+
+#drawer{
+    position:fixed;
+    top:100px;
+    left:-420px;
+
+    width:400px;
+    max-width:90vw;
+
+    background:transparent;
+    padding:0;
+
+    overflow:hidden; /* removes scrollbars */
+
+    box-shadow:none;
+
+    transition:left .35s ease;
+    z-index:9998;
+
+    transform:scale(0.8); /* zoom out */
+    transform-origin:top left;
+}
+
+#drawer{
+    position:fixed;
+    top:100px;
+    left:-500px;
+
+    width:500px;
+    height:auto;
+
+    background:transparent;
+    padding:0;
+
+    overflow:visible;
+
+    box-shadow:none;
+
+    transition:left .35s ease;
+    z-index:9998;
+}
+
+#drawer{
+    zoom:0.70;
+}
+
+#drawer.open{
+    left:20px;
+}
+
+#drawer .twitter-tweet{
+    margin:0 !important;
+}
+
+
+
+#closeDrawer{
+    position:absolute;
+    top:-15px;
+    right:-15px;
+
+    width:35px;
+    height:35px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#111;
+    color:white;
+
+    font-size:22px;
+    cursor:pointer;
+
+    z-index:10;
+}
+
 </style>
 </head>
 
@@ -211,6 +312,27 @@
     <a href="vault.html">Vault</a>
     <a href="mailto:notdabenjamin@gmail.com">Contact</a>
 
+
+
+<script async src="https://platform.x.com/widgets.js"></script>
+
+</div>
+
+<div id="drawerTab">Latest Post</div>
+
+<div id="drawer">
+    <button id="closeDrawer">&times;</button>
+
+    <!-- Put your embeds/content here -->
+    <blockquote class="twitter-tweet">
+        <p lang="zxx" dir="ltr">
+            <a href="https://t.co/pNB6avoKNB">pic.twitter.com/pNB6avoKNB</a>
+        </p>
+        &mdash; Astronomically Large Cheeseburger (@ALCBGames)
+        <a href="https://x.com/ALCBGames/status/2080838237585580376?ref_src=twsrc%5Etfw">
+            July 25, 2026
+        </a>
+    </blockquote>
 </div>
 
 </div>
@@ -238,7 +360,15 @@ setTimeout(() => {
 
 }, 5000);
 
+const drawer = document.getElementById("drawer");
 
+document.getElementById("drawerTab").onclick = () => {
+    drawer.classList.add("open");
+};
+
+document.getElementById("closeDrawer").onclick = () => {
+    drawer.classList.remove("open");
+};
 </script>
 
 </body>
