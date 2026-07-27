@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+       <loc>https://evilcubeworld.vercel.app/</loc>
+       <lastmod>2026-07-27T03:58:28+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://evilcubeworld.vercel.app/games</loc>
+       <lastmod>2026-07-27T03:58:28+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://evilcubeworld.vercel.app/legal</loc>
+       <lastmod>2026-07-27T03:58:28+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://evilcubeworld.vercel.app/vault</loc>
+       <lastmod>2026-07-27T03:58:28+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://evilcubeworld.vercel.app/legal/terms</loc>
+       <lastmod>2026-07-27T03:58:28+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
+  <url>
+       <loc>https://evilcubeworld.vercel.app/legal/privacy</loc>
+       <lastmod>2026-07-27T03:58:28+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
+  <url>
+       <loc>https://evilcubeworld.vercel.app/legal/code-of-conduct</loc>
+       <lastmod>2026-07-27T03:58:28+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
+</urlset>
