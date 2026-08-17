@@ -8,6 +8,42 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
 <style>
+#statusBadge {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+
+    width: 250px;
+    height: 30px;
+
+    z-index: 500;
+
+    border: none;
+    border-radius: 8px;
+
+    /* Makes it feel like a floating UI element */
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+
+    animation: floatBadge 3s ease-in-out infinite;
+
+    transition: transform 0.2s ease;
+}
+
+#statusBadge:hover {
+    animation-play-state: paused;
+    transform: scale(1.05);
+}
+
+@keyframes floatBadge {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+   
     * {
         margin: 0;
         padding: 0;
@@ -334,6 +370,16 @@
         </a>
     </blockquote>
 </div>
+
+   <iframe
+    id="statusBadge"
+    src="https://alcb.betteruptime.com/badge?theme=dark"
+    width="250"
+    height="30"
+    frameborder="0"
+    scrolling="no"
+    style="color-scheme: normal">
+</iframe>
 
 </div>
 
