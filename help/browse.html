@@ -1,0 +1,120 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Browse Articles — ALCB Support
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container nav">
+
+        <a class="brand" href="index.html">
+            ALCB <span>SUPPORT</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="browse.html" class="active">Browse</a>
+            <a href="status.html">Status</a>
+            <a href="contact.html">Get in touch</a>
+        </nav>
+
+        <div class="nav-spacer"></div>
+
+        <div class="socials">
+            <a href="#">Discord</a>
+            <a href="#">X</a>
+            <a href="#">YouTube</a>
+            <a href="#">TikTok</a>
+            <a href="#">Twitch</a>
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container hero">
+
+    <p class="eyebrow">
+        KNOWLEDGE BASE
+    </p>
+
+    <h1>
+        Browse all articles.
+    </h1>
+
+    <p class="lead">
+        Search the whole support library or browse every
+        article below.
+    </p>
+
+
+    <form class="search" id="articleSearch">
+
+        <input
+            id="query"
+            type="text"
+            placeholder="Search by title or topic..."
+            autocomplete="off"
+            aria-label="Search articles"
+        >
+
+        <button type="submit">
+            Search
+        </button>
+
+    </form>
+
+
+    <div class="results">
+
+        <p id="count" class="muted"></p>
+
+        <div id="empty" class="empty">
+            No articles matched that search.
+            Try a different phrase.
+        </div>
+
+    </div>
+
+
+    <section class="section">
+
+        <div class="grid" id="articles"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 Astronomically Large Cheeseburger · ALCB Games
+    </div>
+
+</footer>
+
+
+<script src="articles.js"></script>
+
+</body>
+</html>
+```
