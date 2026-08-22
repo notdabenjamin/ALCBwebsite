@@ -1,118 +1,122 @@
-```javascript
-const ARTICLES = [
+const articles = [
     {
-        title: "Getting Started With ALCB Games",
+        slug: "getting-started",
+        title: "Getting Started with ALCB Games",
         description:
-            "A quick guide to installing, launching, and getting into an ALCB game.",
-        slug: "/help/temparticle"
+            "Everything you need to know before jumping into an ALCB Games project.",
+        category: "Getting Started",
+
+        content: `
+            welcome getting started alcb games support center
+            games problem troubleshooting issue help
+            reporting issue contact support
+        `
     }
 ];
 
 
-const grid =
-    document.getElementById("articles");
+/*
+ * Search articles.
+ *
+ * Searches:
+ * - title
+ * - description
+ * - category
+ * - article content
+ *
+ * Results are ranked so title matches appear first.
+ */
 
-const input =
-    document.getElementById("query");
+function searchArticles(query) {
 
-const form =
-    document.getElementById("articleSearch");
+    const normalizedQuery =
+        query
+            .toLowerCase()
+            .trim();
 
-const count =
-    document.getElementById("count");
-
-const empty =
-    document.getElementById("empty");
-
-
-function render(term = "") {
-
-    const query =
-        term.trim().toLowerCase();
-
-
-    const matches =
-        ARTICLES.filter(article => {
-
-            const searchable =
-                (
-                    article.title +
-                    " " +
-                    article.description
-                ).toLowerCase();
-
-            return searchable.includes(query);
-
-        });
+    if (!normalizedQuery) {
+        return [];
+    }
 
 
-    grid.innerHTML =
-        matches.map(article => `
-
-            <a
-                class="card"
-                href="${article.slug}.html"
-            >
-
-                <span class="tag">
-                    SUPPORT ARTICLE
-                </span>
-
-                <h3>
-                    ${article.title}
-                </h3>
-
-                <p>
-                    ${article.description}
-                </p>
-
-                <span class="arrow">
-                    Read article →
-                </span>
-
-            </a>
-
-        `).join("");
+    const terms =
+        normalizedQuery
+            .split(/\s+/)
+            .filter(Boolean);
 
 
-    count.textContent =
-        `${matches.length} article${
-            matches.length === 1 ? "" : "s"
-        }${
-            query
-                ? ` matching "${term}"`
-                : ""
-        }`;
+    return articles
+        .map(article => {
+
+            const title =
+                article.title.toLowerCase();
+
+            const description =
+                article.description.toLowerCase();
+
+            const category =
+                article.category.toLowerCase();
+
+            const content =
+                article.content.toLowerCase();
 
 
-    empty.style.display =
-        matches.length
-            ? "none"
-            : "block";
+            const searchableText =
+                `${title} ${description} ${category} ${content}`;
+
+
+            let score = 0;
+
+
+            for (const term of terms) {
+
+                if (title.includes(term)) {
+                    score += 10;
+                }
+
+                if (category.includes(term)) {
+                    score += 6;
+                }
+
+                if (description.includes(term)) {
+                    score += 4;
+                }
+
+                if (content.includes(term)) {
+                    score += 2;
+                }
+
+            }
+
+
+            return {
+                article,
+                score,
+                searchableText
+            };
+
+        })
+
+        .filter(result => result.score > 0)
+
+        .sort((a, b) => b.score - a.score)
+
+        .map(result => result.article);
+
 }
 
 
-form.addEventListener(
-    "submit",
-    event => {
+/*
+ * Safely insert text into HTML.
+ */
 
-        event.preventDefault();
+function escapeHTML(value) {
 
-        render(input.value);
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
 
-    }
-);
-
-
-const params =
-    new URLSearchParams(
-        window.location.search
-    );
-
-
-input.value =
-    params.get("q") || "";
-
-
-render(input.value);
-```
+}
