@@ -4,7 +4,7 @@ const ARTICLES = [
         title: "Getting Started With ALCB Games",
         description:
             "A quick guide to installing, launching, and getting into an ALCB game.",
-        slug: "getting-started"
+        slug: "/help/temparticle"
     }
 ];
 
