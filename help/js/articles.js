@@ -12,6 +12,17 @@ const articles = [
             reporting issue contact support
         `
     }
+    {
+        slug: "how-to-avoid-phishing",
+        title: "How to avoid phishing and spoofing",
+        description:
+            "What is phishing/spoofing and how to avoid it and keep your private info and alcb account safe!",
+        category: "security",
+
+        content: `
+           phishing security hacked account spoofing virus malicious
+        `
+    }
 ];
 
 
