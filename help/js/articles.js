@@ -11,7 +11,7 @@ const articles = [
             games problem troubleshooting issue help
             reporting issue contact support
         `
-    }
+    },
     {
         slug: "how-to-avoid-phishing",
         title: "How to avoid phishing and spoofing",
