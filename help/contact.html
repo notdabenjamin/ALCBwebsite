@@ -1,105 +1,215 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Contact Support — ALCB Support</title>
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
+        name="description"
+        content="Contact Astronomically Large Cheeseburger Games support."
     >
 
-    <title>
-        Get in touch — ALCB Support
-    </title>
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="/help/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/help/css/style.css">
 </head>
-
 
 <body>
 
-<header>
+<header class="site-header">
+    <div class="header-inner">
 
-    <div class="container nav">
+        <a href="/help/" class="brand">
+            <span class="brand-mark">🍔</span>
 
-        <a class="brand" href="index.html">
-            ALCB <span>SUPPORT</span>
+            <span>
+                <strong>ALCB</strong>
+                <small>Support</small>
+            </span>
         </a>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="browse.html">Browse</a>
-            <a href="status.html">Status</a>
-            <a href="contact.html" class="active">Get in touch</a>
+        <nav class="main-nav">
+            <a href="/help/">Home</a>
+            <a href="/help/articles/">Articles</a>
+            <a href="/help/contact.html" class="active">Support</a>
         </nav>
 
-        <div class="nav-spacer"></div>
+    </div>
+</header>
 
-        <div class="socials">
-            <a href="#">Discord</a>
-            <a href="#">X</a>
-            <a href="#">YouTube</a>
-            <a href="#">TikTok</a>
-            <a href="#">Twitch</a>
+
+<main>
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <span class="eyebrow">GET HELP</span>
+
+        <h1>Contact support</h1>
+
+        <p>
+            Can't find what you're looking for?
+            Here's where to go next.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <div class="card-icon purple">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 5h16v12H7l-3 3z"></path>
+                    <path d="M7 9h10"></path>
+                    <path d="M7 12h7"></path>
+                </svg>
+            </div>
+
+            <h2>Check the articles</h2>
+
+            <p>
+                Before contacting us, check the support articles.
+                Your question may already have an answer.
+            </p>
+
+            <a href="/help/articles/" class="button">
+                Browse articles →
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <div class="card-icon blue">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 4h16v16H4z"></path>
+                    <path d="m4 5 8 7 8-7"></path>
+                </svg>
+            </div>
+
+            <h2>Contact ALCB Games</h2>
+
+            <p>
+                If you still need help, visit the official ALCB Games
+                website for available contact options.
+            </p>
+
+            <a href="https://alcb.games" class="button">
+                Visit ALCB Games →
+            </a>
+
         </div>
 
     </div>
 
-</header>
+</section>
 
 
-<main class="container article">
-
-    <p class="eyebrow">
-        NEED A HUMAN?
-    </p>
-
-    <h1>
-        Get in touch.
-    </h1>
-
-    <p class="lead">
-        Can't find what you need in the support library?
-        Send ALCB a message.
-    </p>
-
+<section class="section">
 
     <div class="contact-card">
 
-        <h2>
-            Contact ALCB Support
-        </h2>
+        <span class="eyebrow">BEFORE YOU CONTACT US</span>
+
+        <h2>What should I include?</h2>
 
         <p>
-            For bug reports, account questions, technical
-            issues, or anything else that needs a direct answer.
+            If you're reporting a problem, providing a little extra
+            information can make it much easier to figure out what's
+            going on.
         </p>
 
-
-        <a
-            class="email-button"
-            href="mailto:SUPPORT@YOURDOMAIN.COM?subject=ALCB%20Support%20Request"
-        >
-            Email support →
-        </a>
+        <ul>
+            <li>Which ALCB Games project you're having trouble with</li>
+            <li>What you were doing when the problem happened</li>
+            <li>What you expected to happen</li>
+            <li>What actually happened</li>
+            <li>Any error messages you received</li>
+        </ul>
 
     </div>
+
+</section>
 
 </main>
 
 
-<footer>
+<footer class="site-footer">
 
-    <div class="container">
-        © 2026 Astronomically Large Cheeseburger · ALCB Games
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+
+            <span class="brand-mark">🍔</span>
+
+            <div>
+                <strong>ALCB Support</strong>
+                <p>
+                    Astronomically Large Cheeseburger Games
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="socials">
+
+            <a
+                href="https://x.com/"
+                aria-label="X"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4l14 16M19 4 5 20"></path>
+                </svg>
+            </a>
+
+
+            <a
+                href="https://www.youtube.com/"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 8.2a2.7 2.7 0 0 0-1.9-1.9C17.4 5.8 12 5.8 12 5.8s-5.4 0-7.1.5A2.7 2.7 0 0 0 3 8.2 28 28 0 0 0 2.5 12 28 28 0 0 0 3 15.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.1.5 7.1.5s5.4 0 7.1-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-3.8 28 28 0 0 0-.5-3.8z"></path>
+                    <path d="m10 9 5 3-5 3z"></path>
+                </svg>
+            </a>
+
+
+            <a
+                href="https://www.twitch.tv/"
+                aria-label="Twitch"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 3h17v12l-5 5h-4l-3 3v-3H4z"></path>
+                    <path d="M9 8v5"></path>
+                    <path d="M14 8v5"></path>
+                </svg>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+        © 2026 Astronomically Large Cheeseburger Games
     </div>
 
 </footer>
 
 </body>
 </html>
-```
