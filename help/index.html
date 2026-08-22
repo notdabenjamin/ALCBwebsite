@@ -5,35 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ALCB Support</title>
+    <meta
+        name="description"
+        content="Official Astronomically Large Cheeseburger Games support center."
+    >
 
-    <link rel="stylesheet" href="/help/style.css">
+    <link rel="icon" href="/help/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/help/css/style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="container nav">
+<header class="site-header">
+    <div class="header-inner">
 
-        <a class="brand" href="index.html">
-            ALCB <span>SUPPORT</span>
+        <a href="/help/" class="brand">
+            <span class="brand-mark">🍔</span>
+
+            <span>
+                <strong>ALCB</strong>
+                <small>Support</small>
+            </span>
         </a>
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="/help/browse.html">Browse</a>
-            <a href="status.html">Status</a>
-            <a href="contact.html">Get in touch</a>
+        <nav class="main-nav">
+            <a href="/help/" class="active">Home</a>
+            <a href="/help/articles/">Articles</a>
+            <a href="/help/contact/">Support</a>
         </nav>
-
-        <div class="nav-spacer"></div>
-
-        <div class="socials">
-            <a href="#">Discord</a>
-            <a href="#">X</a>
-            <a href="#">YouTube</a>
-            <a href="#">TikTok</a>
-            <a href="#">Twitch</a>
-        </div>
 
     </div>
 </header>
@@ -41,147 +40,292 @@
 
 <main>
 
-    <section class="container hero">
+<section class="hero">
 
-        <p class="eyebrow">
-            ASTRONOMICALLY LARGE CHEESEBURGER · SUPPORT
-        </p>
+    <div class="hero-content">
+
+        <span class="eyebrow">ALCB GAMES SUPPORT</span>
 
         <h1>
-            How can we help?
+            How can we
+            <span>help?</span>
         </h1>
 
-        <p class="lead">
-            Find answers, troubleshoot your games, and get help
-            from ALCB. Search the knowledge base or browse
-            everything we've got.
+        <p>
+            Find answers, troubleshooting information, and useful
+            resources for Astronomically Large Cheeseburger Games.
         </p>
 
-        <form class="search" action="/help/browse.html" method="get">
+        <div class="search-box">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+            </svg>
 
             <input
-                name="q"
-                type="text"
-                placeholder="Search support articles..."
-                aria-label="Search support articles"
+                id="homeSearch"
+                type="search"
+                placeholder="Search support..."
+                autocomplete="off"
             >
 
-            <button type="submit">
-                Search
-            </button>
+            <kbd>/</kbd>
 
-        </form>
+        </div>
 
-    </section>
+        <div id="homeSearchResults" class="search-results hidden"></div>
+
+    </div>
+
+</section>
 
 
-    <section class="container section">
+<section class="section">
 
-        <div class="section-head">
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">SUPPORT CENTER</span>
+            <h2>What do you need?</h2>
+        </div>
+    </div>
+
+
+    <div class="support-grid">
+
+        <a href="/help/articles/" class="support-card">
+
+            <div class="card-icon purple">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21z"></path>
+                    <path d="M4 5.5v15"></path>
+                    <path d="M8 7h8"></path>
+                    <path d="M8 11h8"></path>
+                </svg>
+            </div>
 
             <div>
-                <h2>Popular help</h2>
-
-                <p class="muted">
-                    A useful place to start.
+                <h3>Browse Articles</h3>
+                <p>
+                    Find guides and answers to common questions.
                 </p>
             </div>
 
-            <a class="arrow" href="/help/browse.html">
-                Browse all →
-            </a>
+            <span class="arrow">→</span>
 
-        </div>
+        </a>
 
 
-        <div class="grid">
+        <a href="/help/contact/" class="support-card">
 
-            <a class="card" href="getting-started.html">
+            <div class="card-icon blue">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 5h16v12H7l-3 3z"></path>
+                    <path d="M7 9h10"></path>
+                    <path d="M7 12h7"></path>
+                </svg>
+            </div>
 
-                <span class="tag">
-                    GETTING STARTED
-                </span>
-
-                <h3>
-                    Getting Started With ALCB Games
-                </h3>
-
+            <div>
+                <h3>Contact Support</h3>
                 <p>
-                    A quick guide to installing, launching,
-                    and getting into an ALCB game.
+                    Need help with something else? Get in touch.
                 </p>
+            </div>
 
-                <span class="arrow">
-                    Read article →
-                </span>
+            <span class="arrow">→</span>
 
-            </a>
-
-        </div>
-
-    </section>
+        </a>
 
 
-    <section class="container section">
+        <a href="https://alcb.games" class="support-card external">
 
-        <div class="grid">
+            <div class="card-icon orange">
+                <svg viewBox="0 0 24 24">
+                    <path d="M14 4h6v6"></path>
+                    <path d="M20 4 10 14"></path>
+                    <path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path>
+                </svg>
+            </div>
 
-            <a class="card" href="status.html">
-
-                <span class="tag">
-                    LIVE SERVICE
-                </span>
-
-                <h3>
-                    Check ALCB Status
-                </h3>
-
+            <div>
+                <h3>ALCB Games</h3>
                 <p>
-                    Something acting weird? Check the service
-                    status before troubleshooting further.
+                    Return to the main ALCB Games website.
                 </p>
+            </div>
 
-                <span class="arrow">
-                    View status →
-                </span>
+            <span class="arrow">↗</span>
 
-            </a>
+        </a>
+
+    </div>
+
+</section>
 
 
-            <a class="card" href="contact.html">
+<section class="section faq-section">
 
-                <span class="tag">
-                    HUMAN HELP
-                </span>
-
-                <h3>
-                    Still stuck?
-                </h3>
-
-                <p>
-                    Send us a message and give us the details.
-                    We'll take it from there.
-                </p>
-
-                <span class="arrow">
-                    Get in touch →
-                </span>
-
-            </a>
-
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">QUICK ANSWERS</span>
+            <h2>Frequently asked questions</h2>
         </div>
+    </div>
 
-    </section>
+
+    <div class="faq-list">
+
+        <details>
+            <summary>
+                Where can I find ALCB Games?
+                <span>+</span>
+            </summary>
+
+            <p>
+                You can find ALCB Games projects, announcements, and
+                other information on the main ALCB Games website.
+            </p>
+        </details>
+
+
+        <details>
+            <summary>
+                I found a bug. What should I do?
+                <span>+</span>
+            </summary>
+
+            <p>
+                First, check the support articles for known issues.
+                If the problem isn't covered, contact support with
+                as much useful information as possible.
+            </p>
+        </details>
+
+
+        <details>
+            <summary>
+                Where can I report a problem?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Visit the Support page to find the available ways
+                to contact ALCB Games.
+            </p>
+        </details>
+
+    </div>
+
+</section>
 
 </main>
 
 
-<footer>
-    <div class="container">
-        © 2026 Astronomically Large Cheeseburger · ALCB Games
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            <span class="brand-mark">🍔</span>
+
+            <div>
+                <strong>Astronomically Large Cheeseburger</strong>
+                <p>Games that are probably larger than necessary.</p>
+            </div>
+        </div>
+
+
+        <div class="socials">
+
+            <a href="https://x.com/" aria-label="X">
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4l14 16M19 4 5 20"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 8.2a2.7 2.7 0 0 0-1.9-1.9C17.4 5.8 12 5.8 12 5.8s-5.4 0-7.1.5A2.7 2.7 0 0 0 3 8.2 28 28 0 0 0 2.5 12 28 28 0 0 0 3 15.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.1.5 7.1.5s5.4 0 7.1-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-3.8 28 28 0 0 0-.5-3.8z"></path>
+                    <path d="m10 9 5 3-5 3z"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.twitch.tv/" aria-label="Twitch">
+                <svg viewBox="0 0 24 24">
+                    <path d="M4 3h17v12l-5 5h-4l-3 3v-3H4z"></path>
+                    <path d="M9 8v5"></path>
+                    <path d="M14 8v5"></path>
+                </svg>
+            </a>
+
+        </div>
+
     </div>
+
+
+    <div class="footer-bottom">
+        © 2026 Astronomically Large Cheeseburger Games
+    </div>
+
 </footer>
+
+
+<script src="/help/js/articles.js"></script>
+
+<script>
+const homeSearch = document.getElementById("homeSearch");
+const results = document.getElementById("homeSearchResults");
+
+homeSearch.addEventListener("input", () => {
+
+    const query = homeSearch.value.trim();
+
+    if (!query) {
+        results.innerHTML = "";
+        results.classList.add("hidden");
+        return;
+    }
+
+    const matches = searchArticles(query);
+
+    results.classList.remove("hidden");
+
+    if (!matches.length) {
+        results.innerHTML = `
+            <div class="no-results">
+                <strong>No results found.</strong>
+                <span>Try a different search term.</span>
+            </div>
+        `;
+        return;
+    }
+
+    results.innerHTML = matches.map(article => `
+        <a class="search-result" href="/help/articles/${article.slug}.html">
+            <div>
+                <span class="result-category">${escapeHTML(article.category)}</span>
+                <strong>${escapeHTML(article.title)}</strong>
+                <p>${escapeHTML(article.description)}</p>
+            </div>
+            <span>→</span>
+        </a>
+    `).join("");
+});
+
+
+document.addEventListener("keydown", event => {
+
+    if (
+        event.key === "/" &&
+        document.activeElement !== homeSearch
+    ) {
+        event.preventDefault();
+        homeSearch.focus();
+    }
+
+});
+</script>
 
 </body>
 </html>
-```
