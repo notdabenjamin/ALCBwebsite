@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Articles — ALCB Support</title>
+
+    <link rel="icon" href="/help/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/help/css/style.css">
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <a href="/help/" class="brand">
+            <span class="brand-mark">🍔</span>
+
+            <span>
+                <strong>ALCB</strong>
+                <small>Support</small>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="/help/">Home</a>
+            <a href="/help/articles/" class="active">Articles</a>
+            <a href="/help/contact/">Support</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <span class="eyebrow">KNOWLEDGE BASE</span>
+
+        <h1>Support articles</h1>
+
+        <p>
+            Guides, answers, and useful information from ALCB Games.
+        </p>
+
+        <div class="search-box">
+
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+            </svg>
+
+            <input
+                id="articleSearch"
+                type="search"
+                placeholder="Search articles..."
+                autocomplete="off"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="article-layout">
+
+        <aside class="category-sidebar">
+
+            <span class="sidebar-title">CATEGORIES</span>
+
+            <button class="category-button active" data-category="all">
+                All articles
+            </button>
+
+            <button class="category-button" data-category="getting started">
+                Getting Started
+            </button>
+
+            <button class="category-button" data-category="troubleshooting">
+                Troubleshooting
+            </button>
+
+        </aside>
+
+
+        <div class="article-content">
+
+            <div id="articleCount" class="article-count"></div>
+
+            <div id="articleList" class="article-list"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <div class="footer-brand">
+            <span class="brand-mark">🍔</span>
+
+            <div>
+                <strong>ALCB Support</strong>
+                <p>Astronomically Large Cheeseburger Games</p>
+            </div>
+        </div>
+
+        <div class="socials">
+
+            <a href="https://x.com/" aria-label="X">
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4l14 16M19 4 5 20"></path>
+                </svg>
+            </a>
+
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+                <svg viewBox="0 0 24 24">
+                    <path d="M21 8.2a2.7 2.7 0 0 0-1.9-1.9C17.4 5.8 12 5.8 12 5.8s-5.4 0-7.1.5A2.7 2.7 0 0 0 3 8.2 28 28 0 0 0 2.5 12 28 28 0 0 0 3 15.8a2.7 2.7 0 0 0 1.9 1.9c1.7.5 7.1.5 7.1.5s5.4 0 7.1-.5a2.7 2.7 0 0 0 1.9-1.9 28 28 0 0 0 .5-3.8 28 28 0 0 0-.5-3.8z"></path>
+                    <path d="m10 9 5 3-5 3z"></path>
+                </svg>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Astronomically Large Cheeseburger Games
+    </div>
+
+</footer>
+
+
+<script src="/help/js/articles.js"></script>
+
+<script>
+
+const searchInput = document.getElementById("articleSearch");
+const articleList = document.getElementById("articleList");
+const articleCount = document.getElementById("articleCount");
+
+let selectedCategory = "all";
+
+
+function renderArticles() {
+
+    const query = searchInput.value.trim().toLowerCase();
+
+    let filtered = articles.filter(article => {
+
+        const matchesCategory =
+            selectedCategory === "all" ||
+            article.category.toLowerCase() === selectedCategory;
+
+        const searchable = `
+            ${article.title}
+            ${article.description}
+            ${article.category}
+            ${article.content}
+        `.toLowerCase();
+
+        const matchesSearch =
+            !query || searchable.includes(query);
+
+        return matchesCategory && matchesSearch;
+
+    });
+
+
+    articleCount.textContent =
+        `${filtered.length} ${filtered.length === 1 ? "article" : "articles"}`;
+
+
+    if (!filtered.length) {
+
+        articleList.innerHTML = `
+            <div class="empty-state">
+
+                <div class="empty-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="7"></circle>
+                        <path d="m20 20-4-4"></path>
+                    </svg>
+                </div>
+
+                <h2>No articles found</h2>
+
+                <p>
+                    Try another search term or category.
+                </p>
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    articleList.innerHTML = filtered.map(article => `
+
+        <a
+            href="/help/articles/${article.slug}.html"
+            class="article-card"
+        >
+
+            <div class="article-card-icon">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M5 4h14v16H5z"></path>
+                    <path d="M8 8h8"></path>
+                    <path d="M8 12h8"></path>
+                    <path d="M8 16h5"></path>
+                </svg>
+
+            </div>
+
+
+            <div class="article-card-main">
+
+                <span class="result-category">
+                    ${escapeHTML(article.category)}
+                </span>
+
+                <h2>
+                    ${escapeHTML(article.title)}
+                </h2>
+
+                <p>
+                    ${escapeHTML(article.description)}
+                </p>
+
+            </div>
+
+
+            <span class="article-arrow">→</span>
+
+        </a>
+
+    `).join("");
+
+}
+
+
+searchInput.addEventListener("input", renderArticles);
+
+
+document.querySelectorAll(".category-button").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        document
+            .querySelectorAll(".category-button")
+            .forEach(btn => btn.classList.remove("active"));
+
+        button.classList.add("active");
+
+        selectedCategory =
+            button.dataset.category;
+
+        renderArticles();
+
+    });
+
+});
+
+
+renderArticles();
+
+</script>
+
+</body>
+</html>
