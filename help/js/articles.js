@@ -22,6 +22,17 @@ const articles = [
         content: `
            phishing security hacked account spoofing virus malicious
         `
+    },
+    {
+        slug: "delete-my-account",
+        title: "How to delete my account",
+        description:
+            "We make it easy to delete your account as well as all information associated. Disclaimer: Once info is deleted it cannot be recovered.",
+        category: "privacy",
+
+        content: `
+           account delete privacy problem info 
+        `
     }
 ];
 
